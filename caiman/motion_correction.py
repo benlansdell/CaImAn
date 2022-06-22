@@ -2825,6 +2825,10 @@ def motion_correct_batch_rigid(fname, max_shifts, dview=None, splits=56, num_spl
             save_movie = save_movie_rigid
             logging.debug('saving!')
 
+        #if isinstance(fname, tuple):
+        #    base_name=os.path.split(fname[0])[-1][:-4] + '_rig_'
+        #else:
+        #    base_name=os.path.split(fname)[-1][:-4] + '_rig_'
 
         if isinstance(fname, tuple):
             base_name=os.path.splitext(os.path.split(fname[0])[-1])[0] + '_rig_'
